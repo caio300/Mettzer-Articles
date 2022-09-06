@@ -35,10 +35,14 @@ export const LinksHeader = styled.div`
     text-decoration: none;
     gap: 1rem;
     color: ${(props) => props.theme['gray-500']};
-  }
 
-  a:hover {
-    border-bottom: 1px solid ${(props) => props.theme['green-100']};
+    &:hover {
+      border-bottom: 1px solid ${(props) => props.theme['green-100']};
+    }
+
+    &.active {
+      border-bottom: 1px solid ${(props) => props.theme['green-100']};
+    }
   }
 
   svg {
