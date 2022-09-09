@@ -13,8 +13,24 @@ export function CardArticle(articles) {
   const [isFavorite, setIsFavorite] = useState(false)
 
   const handleClickFavorites = () => {
-    console.log('Favoritou')
+    const myFavorites = JSON.parse(localStorage.getItem('favorites'))
     setIsFavorite(!isFavorite)
+    if (myFavorites) {
+      const findArticle = myFavorites.find((elem) => elem.id === article.id)
+      if (findArticle) {
+        const removeArticle = myFavorites.filter(
+          (elem) => elem.id !== article.id,
+        )
+        localStorage.setItem('favorites', JSON.stringify(removeArticle))
+      } else {
+        localStorage.setItem(
+          'favorites',
+          JSON.stringify([...myFavorites, article]),
+        )
+      }
+    } else {
+      localStorage.setItem('favorites', JSON.stringify([article]))
+    }
   }
 
   return (
