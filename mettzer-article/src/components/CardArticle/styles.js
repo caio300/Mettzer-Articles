@@ -47,15 +47,21 @@ export const UsefulContainer = styled.div`
 
   a {
     text-decoration: none;
+    color: ${(props) => props.theme['gray-300']};
   }
 
   div,
   a {
     display: flex;
+    gap: 0.75rem;
     align-items: center;
     justify-content: center;
     width: 100%;
     cursor: pointer;
+  }
+
+  div {
+    color: ${(props) => props.theme['gray-300']};
   }
 
   svg {

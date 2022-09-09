@@ -7,6 +7,10 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
+  :focus {
+    outline: 0;
+  }
+
   body {
     background-color: ${(props) => props.theme.white};
     -webkit-font-smoothing: antialiased;

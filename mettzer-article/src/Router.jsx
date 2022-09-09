@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom'
 import { DefaultLayout } from './layouts/DefaultLayout'
+
 import { Favorite } from './Pages/Favorite'
 import { Home } from './Pages/Home'
 
